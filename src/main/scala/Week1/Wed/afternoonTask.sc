@@ -5,7 +5,7 @@ import java.security.KeyStore.TrustedCertificateEntry
 //
 //val waterMelons: Int = Random.nextInt (11)
 
-val waterMelons: Int = 4
+val waterMelons: Int = 7
 
 if (waterMelons == 0) {
   println (s"John wants $waterMelons melons, so goes home.")
@@ -26,10 +26,36 @@ if ((johnHasBag && waterMelons <= 5) ||
    (!johnHasBag && waterMelons <= 3)) {
   println(s"John wants $waterMelons melons so can carry his melons")
 } else {
-  println("John wants more melons than he can carry")
+  println(s"John wants $waterMelons melons which is more than he can carry")
 }
 
 println(f"Total Cost = £${waterMelons*1.397}%.2f")
 
+// Extension
 
+val booleanTest :Boolean = (true || false && false)
+
+println(booleanTest)
+
+val booleanTestTwo :Boolean = ((true || false) && false)
+
+println(booleanTestTwo)
+
+val booleanTestThree :Boolean = ((1 < 4 && 7 != 10) || 9 + 10 == 21)
+
+println(booleanTestThree)
+
+// Research
+
+val number1 :Int = 20
+val number2 :Int = 30
+var myString :String = ""
+
+if (number1 < number2) {
+  myString = "Yes"
+} else {
+  myString = "No"
+}
+
+println(myString)
 
