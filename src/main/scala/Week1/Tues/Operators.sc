@@ -61,7 +61,7 @@ val c:Boolean = "hamster" < "hippo"
 val d:Boolean = 8%2 == 0
 val e:Boolean = 156/8 < 20 && 54 < 20 && 54 / 4 < 14
 
-val ansA:Boolean = (3+4) * 57 < 300
+val ansA:Boolean = 3 + 4 * 57 < 300
 val ansB:Boolean = 144/12 >= 12
 val ansC:Boolean = "Cat" < "Dog"
 val ansD:Boolean = "Rabbit" < "Hamster"
@@ -78,6 +78,7 @@ println("This is a string")
  * println is a function that will print what ever is in it.
  * Both the val and println contain the same string so are one in the same.
  * But the val will produce no output unless called by a println function
+ * println returns a unit, it is not specific
   */
 
 // Extension 1
@@ -122,6 +123,8 @@ val estSix:String = "first word should be capitalized".capitalize
 /** Does not work as new is reserved as a key keyword in Skala so
  * a different name must be used. As per below;
  */
+
+// val `new`
 
 val newString:String = "test"
 
