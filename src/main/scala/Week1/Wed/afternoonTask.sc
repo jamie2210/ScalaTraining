@@ -47,11 +47,11 @@ println(booleanTestThree)
 
 // Research
 
-val number1 :Int = 20
+val number1 :Int = 40
 val number2 :Int = 30
 var myString :String = ""
 
-if (number1 < number2) {
+if (number1 > number2) {
   myString = "Yes"
 } else {
   myString = "No"
