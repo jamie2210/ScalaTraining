@@ -66,10 +66,12 @@ if (number1 > number2) {
 }
 
 println(myString)
-
 /**
  * if else statement ask which of the 2 numbers is higher adding yes
  * or no to the string var
  */
 
-
+val number1 :Int = 40
+val number2 :Int = 30
+var newString :String = if (number1 > number2) "yes" else "no"
+println(newString)
