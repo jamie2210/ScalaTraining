@@ -30,13 +30,14 @@ val removeBlue: Seq[String] = primeSeq.filter {_ != "Blue"}
 /** ----------------------------------------------- d) */
 
 val isOrange :Boolean = primeSeq.exists(_.toLowerCase.contains("orange"))
+// returns true if seq contains the word orange
 
 /** 2. ----------------------------------------------- */
 
 val numIsOdd :List[Boolean] = numList.map {
   num => num %2 !=0
 }
-// returns true if odd, false if even, true if both in list
+// returns true for all odd numbers and false for all even in the list
 
 val numIsOdd :List[Boolean] = numList.map {_ %2 !=0}
 // Short hand version
@@ -79,9 +80,9 @@ val uniqueNum: Seq[Int] = numberSeq.filter {
 }
 
 /**
- * filter first finds numbers  less than 3
- * then nex finds the range that is more than 4 and less than 8
- * and then calls for the odd numbers within that ranger
+ * filter first finds numbers less than 3
+ * then next finds the range that is more than 4 and less than 8
+ * and then calls for the odd numbers within that range
  */
 
 /** 2. ----------------------------------------------- */
