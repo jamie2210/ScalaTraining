@@ -107,23 +107,36 @@ val b = append("Yo!") // Yo! Yo!
 /** PURE FUNCTION TASK */
 
 //Fibonacci Sequence
+// Define a function named `fibonacci` that takes an integer `i` as a parameter and returns an integer
 def fibonacci(i: Int): Int = {
+  // Initialize the first two values of the custom Fibonacci sequence
   val f1 = 3
   val f2 = 4
 
-
+  // Base case: if `i` is 0, return the first value of the sequence
   if (i == 0)
     f1
+  // Base case: if `i` is 1, return the second value of the sequence
   else if (i == 1)
     f2
+  // Recursive case: if `i` is greater than 1, calculate the Fibonacci value recursively
   else {
+    // Compute the (i-1)th Fibonacci number
     val fPrev1 = fibonacci(i - 1)
+    // Compute the (i-2)th Fibonacci number
     val fPrev2 = fibonacci(i - 2)
+    // Return the sum of the two previous Fibonacci numbers
     fPrev1 + fPrev2
   }
 }
-def printSeq(n:Int): Unit = {
+
+// Define a function named `printSeq` that takes an integer `n` as a parameter and returns nothing (Unit)
+def printSeq(n: Int): Unit = {
+  // Create a range from 0 to n-1
   val index = 0 until n
+  // Iterate over the range and print each Fibonacci number
   index.foreach(i => println(fibonacci(i)))
 }
+
+// Call the `printSeq` function with the argument 5 to print the first 5 Fibonacci numbers
 printSeq(5)
