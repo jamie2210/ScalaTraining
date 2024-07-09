@@ -13,8 +13,9 @@ Case Class: Instances can be decomposed using pattern matching.
 
 Class: Instances can be mutable or immutable depending on the definition.
 Case Class: Instances are immutable by default. All fields are val unless explicitly declared as var.
-
 */
+
+/** MVP */
 
 // 2. Which of the following lines of code is runnable and which will produce an error
 
@@ -57,4 +58,30 @@ val isEqual = List(anotherChocolateMuffin, oneMoreChocolateMuffin, finalChocolat
 
 val isEqual2 = List(anotherChocolateMuffin, oneMoreChocolateMuffin, finalChocolateMuffin).contains(chocolateMuffin) // true
 
+/** EXTENSION */
 
+case class Fruit (name: String, tropical: Boolean, cost: Double)
+
+//case object Fruit1 extends Fruit (name = "Strawberry", tropical = false, cost = 2.5)
+
+val fruit1 = Fruit(name = "Banana", tropical = true, cost = 0.90)
+val fruit2 = Fruit(name = "Apple", tropical = false, cost = 1.20)
+val fruit3 = Fruit(name = "Mango", tropical = true, cost = 3.95)
+
+val fruit1Name = fruit1.copy(name = "Coconut")
+val fruit2Tropical = fruit2.copy(name = "Pineapple", tropical = true)
+val fruit3Cost = fruit3.copy(cost = 2.79)
+
+println(fruit1Name.toString)
+println(fruit2Tropical.toString)
+println(fruit3Cost.toString)
+
+println(fruit1Name)
+println(fruit2Tropical)
+println(fruit3Cost)
+
+val fruitMirror = fruit2
+
+fruit1 == fruit1Name
+fruit2Tropical == fruit3Cost
+fruitMirror == fruit2
