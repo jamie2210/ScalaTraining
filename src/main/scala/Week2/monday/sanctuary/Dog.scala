@@ -7,6 +7,7 @@ class Dog (
   val hasTail: Boolean
   ) extends Mammal with Domesticated with Species {
     val dietType: DietType = Carnivore
+    val personality: Personality = Friendly
     val conservationStatus: String = "Least Concern"
     val domestic: Boolean = true
     val makesLoyalPet: Boolean = true

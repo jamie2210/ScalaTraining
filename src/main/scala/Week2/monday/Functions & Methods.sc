@@ -106,6 +106,8 @@ val b = append("Yo!") // Yo! Yo!
 
 /** PURE FUNCTION TASK */
 
+/** ----------------------------------- Arei */
+
 //Fibonacci Sequence
 // Define a function named `fibonacci` that takes an integer `i` as a parameter and returns an integer
 def fibonacci(i: Int): Int = {
@@ -129,14 +131,64 @@ def fibonacci(i: Int): Int = {
     fPrev1 + fPrev2
   }
 }
+fibonacci(10)
 
-// Define a function named `printSeq` that takes an integer `n` as a parameter and returns nothing (Unit)
-def printSeq(n: Int): Unit = {
-  // Create a range from 0 to n-1
-  val index = 0 until n
-  // Iterate over the range and print each Fibonacci number
-  index.foreach(i => println(fibonacci(i)))
+/** f1 & f2 */
+// 0   1   2   3   4   5   6   7   8   9   10
+/** Fib seq from 3,4 */
+// 3   4   7   11  18  29  47  76  123 199 322
+
+
+/** ----------------------------------- Tom */
+
+// Define a recursive function to compute the Fibonacci sequence
+
+// Pure fibonacci function
+def fibonacciPure(n: Int, seq: Seq[Int]): Seq[Int] = {
+
+  // Retrieve the last element of the sequence, which is the most recent Fibonacci number
+  val n1: Int = seq.reverse.head
+
+  // Retrieve the second-to-last element of the sequence
+  val n2: Int = seq.reverse.tail.head
+
+  // Base case: if n is less than or equal to 0, return the current sequence
+  if (n <= 0) seq
+
+  // Recursive case: otherwise, append the sum of the last two elements to the sequence
+  // and call fibonacciPure with n decremented by 1
+  else fibonacciPure(n - 1, seq :+ (n1 + n2))
 }
 
-// Call the `printSeq` function with the argument 5 to print the first 5 Fibonacci numbers
-printSeq(5)
+// Example usage
+val start = Seq(3, 4) // The starting sequence for Fibonacci, typically starting with 0 and 1
+fibonacciPure(10, start) // Compute the first 5 additional Fibonacci numbers starting from the initial sequence
+
+
+// Impure fibonacci function
+// Define a mutable variable to hold the sequence of Fibonacci numbers
+var sequence: Seq[Int] = Seq(3, 4)
+
+// Define an impure recursive function to compute the Fibonacci sequence
+def fibonacciImpure(n: Int): Seq[Int] = {
+
+  // Retrieve the last element of the sequence, which is the most recent Fibonacci number
+  val n1: Int = sequence.reverse.head
+
+  // Retrieve the second-to-last element of the sequence
+  val n2: Int = sequence.reverse.tail.head
+
+  // Base case: if n is less than or equal to 0, return the current sequence
+  if (n <= 0) sequence
+
+  // Recursive case: otherwise, append the sum of the last two elements to the sequence,
+  // update the mutable sequence variable, and call fibonacciImpure with n decremented by 1
+  else {
+    sequence = sequence :+ (n1 + n2)
+    fibonacciImpure(n - 1)
+  }
+}
+
+// Example usage
+fibonacciImpure(5) // Compute the first 5 additional Fibonacci numbers starting from the initial sequence
+
