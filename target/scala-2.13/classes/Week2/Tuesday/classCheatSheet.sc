@@ -143,4 +143,3 @@ object AnotherNewPark3 extends CandyFloss1 // Can still override as above
 sealed abstract class SealedAbstractClass
 sealed trait SealedTrait
 // allows for exhaustive matching (to be continued....)
-
