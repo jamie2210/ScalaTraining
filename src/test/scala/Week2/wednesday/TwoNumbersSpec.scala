@@ -24,7 +24,6 @@ class TwoNumbersSpec extends FlatSpec {
     assert(numbers4.divideXByY == 0.5)
   }
 
-
   "isAMultiple" should "Find if is divisible" in {
     val numbers5 = new TwoNumbers(2,1)
     assert(numbers5.isAMultiple())
