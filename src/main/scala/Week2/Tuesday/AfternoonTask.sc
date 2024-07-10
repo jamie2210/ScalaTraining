@@ -13,6 +13,7 @@ Case Class: Instances can be decomposed using pattern matching.
 
 Class: Instances can be mutable or immutable depending on the definition.
 Case Class: Instances are immutable by default. All fields are val unless explicitly declared as var.
+
 */
 
 /** MVP */
@@ -24,9 +25,9 @@ case class Person(name: String, age: Int, nationality: String, isStudent: Boolea
 // b)
 val firstPerson = new Person("Carlos", 23, "Spanish", true) // error (new)
 // c)
-val secondPerson = Person("Carlos", 23, "Spanish", true)
+val secondPerson = Person("Carlos", 23, "Spanish", isStudent = true)
 // d)
-val thirdPerson = Person("Chloe", 25, "British", false)
+//thirdPerson = Person("Chloe", 25, "British", isStudent = false) // error - no val
 // e)
 class Animal(name: String, colour: String, pet: Boolean)
 // f)
@@ -42,8 +43,8 @@ val blueberryMuffin = Muffin("blueberry", 3.5, "Mercator Bakery")
 val vanillaMuffin = Muffin("vanilla", 3.50, "Mercator Bakery")
 
 val anotherChocolateMuffin = Muffin("chocolate", 3.50, "Mercator Bakery")
-val oneMoreChocolateMuffin = Muffin("chocolate", 3.50, "Mercator Bakery")
-val finalChocolateMuffin = Muffin("chocolate", 3.50, "Mercator Bakery")
+val oneMoreChocolateMuffin = Muffin("Chocolate", 3.50, "Mercator Bakery")
+val finalChocolateMuffin = Muffin("choocolate", 2.50, "MercatorBakery")
 
 chocolateMuffin == blueberryMuffin
 chocolateMuffin == vanillaMuffin
@@ -61,8 +62,9 @@ val isEqual2 = List(anotherChocolateMuffin, oneMoreChocolateMuffin, finalChocola
 /** EXTENSION */
 
 case class Fruit (name: String, tropical: Boolean, cost: Double)
+case object FruitStore
 
-//case object Fruit1 extends Fruit (name = "Strawberry", tropical = false, cost = 2.5)
+//case object FruitStore extends Fruit (name = "Strawberry", tropical = false, cost = 2.5)
 
 val fruit1 = Fruit(name = "Banana", tropical = true, cost = 0.90)
 val fruit2 = Fruit(name = "Apple", tropical = false, cost = 1.20)
@@ -72,16 +74,14 @@ val fruit1Name = fruit1.copy(name = "Coconut")
 val fruit2Tropical = fruit2.copy(name = "Pineapple", tropical = true)
 val fruit3Cost = fruit3.copy(cost = 2.79)
 
-println(fruit1Name.toString)
-println(fruit2Tropical.toString)
-println(fruit3Cost.toString)
+fruit1Name.toString
+fruit2Tropical.toString
+fruit3Cost.toString
+fruit3Cost
 
-println(fruit1Name)
-println(fruit2Tropical)
-println(fruit3Cost)
 
-val fruitMirror = fruit2
+fruit1Name
+fruit2Tropical
+fruit3Cost
 
-fruit1 == fruit1Name
-fruit2Tropical == fruit3Cost
-fruitMirror == fruit2
+fruit1.equals(fruit2)
