@@ -6,7 +6,7 @@ import org.scalatest.matchers.should.Matchers
 
 class EitherSpec extends AnyWordSpec with Matchers {
 
-  "isOdd should" {
+  "isOdd" should {
     "return a Right" when {
       "number is odd" in {
         val result = isOdd(3)
