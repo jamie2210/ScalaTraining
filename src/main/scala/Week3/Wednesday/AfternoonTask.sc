@@ -19,7 +19,6 @@ case class Person (
                   fullName: String,
                   dob: LocalDate,
                   age: Option[Int],
-                  starSign: String,
                   occupation: Option[String],
                   lastCountryRes: String,
                   dateOfDeath: Option[LocalDate],
@@ -30,19 +29,18 @@ def createPerson(
                   fullName: String,
                   dob: LocalDate,
                   age: Option[Int],
-                  starSign: String,
                   occupation: Option[String],
                   lastCountryRes: String,
                   dateOfDeath: Option[LocalDate],
                   ageAtDeath: Option[Int]
                 ): Person = {
 
-  Person(fullName, dob, age, starSign, occupation , lastCountryRes, dateOfDeath, ageAtDeath)
+  Person(fullName, dob, age, occupation , lastCountryRes, dateOfDeath, ageAtDeath)
 }
 
-val jamie = createPerson("Jamie Letts", LocalDate.of(1983, 10, 22), Some(40), "Libra",  None, "UAE", None, None)
-val trevor = createPerson("Trevor Nelson", LocalDate.of(1971, 4, 13), Some(53), "Aries", Some("DJ"), "France", None, None)
-val tracy = createPerson("Tracy Gibbons", LocalDate.of(1873, 3, 1), None, "Pisces", Some("Nurse"), "England", Some(LocalDate.of(1949, 1, 17)), Some(76))
+val jamie = createPerson("Jamie Letts", LocalDate.of(1983, 10, 22), Some(40),  None, "UAE", None, None)
+val trevor = createPerson("Trevor Nelson", LocalDate.of(1971, 4, 13), Some(53), Some("DJ"), "France", None, None)
+val tracy = createPerson("Tracy Gibbons", LocalDate.of(1873, 3, 1), None, Some("Nurse"), "England", Some(LocalDate.of(1949, 1, 17)), Some(76))
 
 println(jamie)
 
