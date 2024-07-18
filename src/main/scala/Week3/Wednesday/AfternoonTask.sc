@@ -46,7 +46,6 @@ println(jamie)
 
 def horoscope(dob: LocalDate): (String, String) = {
   val (month, day) = (dob.getMonthValue, dob.getDayOfMonth)
-  println(s"Month: $month, Day: $day")
 
   val starSign = (month, day) match {
     case (1, day) if day <= 19 => "Capricorn"
@@ -105,17 +104,15 @@ val trevorHoroscope = getHoroscope(trevor)
 
 println(s"Trevor's Star Sign is ${trevorHoroscope._1}: ${trevorHoroscope._2}")
 
-
-//case "Aquarius" => "Innovation will bring you joy"
-//case "Pisces" => "Your intuition is strong today."
-//case "Aries" => "Today is a great day to start something new."
-//case "Taurus" => "You will find comfort in familiar places."
-//case "Gemini" => "Communication is key today."
-//case "Cancer" => "You might feel more emotional today."
-//case "Leo" => "Your confidence will shine through."
-//case "Virgo" => "Pay attention to the details."
-//case "Libra" => "Balance is important today."
-//case "Scorpio" => "Your determination will pay off."
-//case "Sagittarius" => "Adventure awaits you."
-//case "Capricorn" => "Hard work will lead to success."
-//case _ => "Error: no horoscope available."
+//case (1, day) if day <= 20 || (month == 2 && day <= 18) => "Aquarius"
+//case (2, day) if day >= 19 || (month == 3 && day <= 20) => "Pisces"
+//case (3, day) if day >= 21 || (month == 4 && day <= 19) => "Aries"
+//case (4, day) if day >= 20 || (month == 5 && day <= 20) => "Taurus"
+//case (5, day) if day >= 21 || (month == 6 && day <= 20) => "Gemini"
+//case (6, day) if day >= 21 || (month == 7 && day <= 22) => "Cancer"
+//case (7, day) if day >= 23 || (month == 8 && day <= 22) => "Leo"
+//case (8, day) if day >= 23 || (month == 9 && day <= 22) => "Virgo"
+//case (9, day) if day >= 23 || (month == 10 && day <= 22) => "Libra"
+//case (10, day) if day >= 23 || (month == 11 && day <= 21) => "Scorpio"
+//case (11, day) if day >= 22 || (month == 12 && day <= 21) => "Sagittarius"
+//case (12, day) if day >= 22 || (month == 1 && day <= 19) => "Capricorn"
