@@ -1,6 +1,7 @@
 package Week3.Thursday
 
 import java.time.LocalDate
+import Week3.Friday.Futures.{addition, additionInAFuture}
 
 object Either extends App {
 
@@ -94,4 +95,5 @@ object Either extends App {
   println(validateUser(passwordBad)) // Left(Password must mae up of upper and lower case)
   println(validateUser(ageBad)) // Left(Username must be at least 12 characters)
   println(validateUser(usernameGood)) // Right(ValidatedUser(JamieAndrewLetts,fdeGBG,1970-05-12))
+
 }
