@@ -24,7 +24,8 @@ object VinnieAfternoonTask extends App {
   object Postcode {
     def postcodeOrError(maybePostCode: String): Either[InvalidPostcodeError, Postcode] = {
       val postcodePattern = """^\S+\s+\S+$""".r
-      if (postcodePattern.matches(maybePostCode)) Right(Postcode(maybePostCode)) else Left(InvalidPostcodeError(s"Invalid postcode: $maybePostCode"))
+      if (postcodePattern.matches(maybePostCode)) Right(Postcode(maybePostCode))
+      else Left(InvalidPostcodeError(s"Invalid postcode: $maybePostCode"))
     }
   }
 
