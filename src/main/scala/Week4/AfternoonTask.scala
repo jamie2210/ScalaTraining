@@ -35,15 +35,10 @@ object AfternoonTask extends App {
 
   object Teams {
     case object England extends Teams("England")
-
     case object Spain extends Teams("Spain")
-
     case object France extends Teams("France")
-
     case object Germany extends Teams("Germany")
-
     case object Italy extends Teams("Italy")
-
     case object Portugal extends Teams("Portugal")
   }
 
