@@ -78,7 +78,6 @@ object AfternoonTask extends App {
   println(isEven(20))
 
 
-
   // Task Four
   def additonalRec(x: Int): Int = {
     @tailrec
