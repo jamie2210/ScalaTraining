@@ -7,7 +7,7 @@
 val addition: (Int, Int) => Int = (x,y) => x + y
 addition(1,2)
 
-val subtract: (Int, Int) => Int = (x,y) => x + y
+val subtract: (Int, Int) => Int = (x,y) => x - y
 subtract(1,2)
 
 //2. Store functions in collections (e.g. lists, maps, seq)
@@ -29,7 +29,7 @@ def manipulateNumbers(x:Int, y:Int, function:(Int, Int) => Int): Int = {
 }
 
 manipulateNumbers(1,2, addition)
-manipulateNumbers(1,2, subtract)
+manipulateNumbers(6,2, subtract)
 
 // 4. return functions from other functions
 def createAdditionFunction (x: Int): Int => Int = {
