@@ -4,7 +4,7 @@ val multiply: Int => Int = x => x*5
 multiply(5)
 
 def applyTwice(y: Int, multiply: Int => Int): Int = {
-  multiply(y) * 2
+  multiply(multiply(y))
 }
 
 applyTwice(2, multiply)
